@@ -32,11 +32,6 @@ public class HomeController : MonoBehaviour
         Avatar.sprite = AvatarProfile.sprite;
     }
 
-    public void SetAvatar()
-    {
-        Debug.Log(gameObject.ToString());
-        AvatarProfile.sprite = gameObject.GetComponent<Image>().sprite;
-    }
     public void OnValueChanged()
     {
         if(Name.text.Length > MaxLength)
