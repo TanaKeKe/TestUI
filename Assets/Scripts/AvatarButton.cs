@@ -11,6 +11,7 @@ public class AvatarButton : MonoBehaviour
    public void Init(AvatarInfors avatar)
     {
         avatarInfors = avatar;
+
         preview.sprite = avatarInfors.SpriteImage;
     }
     public void OnClick()
