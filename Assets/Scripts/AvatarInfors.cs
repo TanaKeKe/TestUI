@@ -8,15 +8,6 @@ public class AvatarInfors : ScriptableObject
     [SerializeField] private Sprite spriteImage;
     [SerializeField] private int id;
 
-    public Sprite SpriteImage
-    {
-        get { return spriteImage; }
-    }
-
-    public int Id
-    {
-        get { return id; }
-    }
     private void OnValidate()
     {
         id = int.Parse(name);
