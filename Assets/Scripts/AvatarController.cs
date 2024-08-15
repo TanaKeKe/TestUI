@@ -12,7 +12,6 @@ public class AvatarController : MonoBehaviour
     public void SetUI()
     {
         imageAvatar.sprite = avatarInfors.SpriteImage;
-        nameAvatar = avatarInfors.Name;
         idAvatar = avatarInfors.Id;
     }
 }
