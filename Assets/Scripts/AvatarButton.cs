@@ -5,19 +5,12 @@ using UnityEngine.UI;
 
 public class AvatarButton : MonoBehaviour
 {
-    [SerializeField] private Button button;
-    [SerializeField] private Image image;
-    private void Start()
+    [SerializeField] private Image preview;
+    private AvatarInfors avatarInfors;
+    
+   public void SetImage(AvatarInfors avatar)
     {
-        button.onClick.AddListener(() =>
-        {
-            AvatarController.Instance.ChangeAvatar(image.sprite);
-        });
+        avatarInfors = avatar;
+        preview.sprite = avatarInfors.SpriteImage;
     }
-
-    /*private void OnValidate()
-    {
-        button = GetComponent<Button>();
-        image = GetComponent<Image>();
-    }*/
-}
+}   

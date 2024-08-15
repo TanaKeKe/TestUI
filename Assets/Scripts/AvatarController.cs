@@ -5,19 +5,14 @@ using UnityEngine.UI;
 
 public class AvatarController : MonoBehaviour
 {
-    #region singleton
-    public static AvatarController Instance;
-    private void Awake()
+    [SerializeField] private AvatarInfors avatarInfors;
+    [SerializeField] private Image imageAvatar;
+    [SerializeField] private string nameAvatar;
+    [SerializeField] private int idAvatar;
+    public void SetUI()
     {
-        Instance = this;
-    }
-    #endregion
-
-    public Image[] avatar;
-    public void ChangeAvatar(Sprite sprite)
-    {
-        foreach (var item in avatar) {
-            item.sprite = sprite;
-        }
+        imageAvatar.sprite = avatarInfors.SpriteImage;
+        nameAvatar = avatarInfors.Name;
+        idAvatar = avatarInfors.Id;
     }
 }
