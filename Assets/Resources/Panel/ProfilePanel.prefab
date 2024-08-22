@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c023cc133e9b794e88f3abe667e8d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnClose: 1
   avatar: {fileID: 1735364151501470411}
   txtField: {fileID: 6785588803829479404}
   avatarPrefab: {fileID: 9068631300443767376, guid: 75a374c0d46d6ba459eb79b6e655c16a, type: 3}
@@ -1663,7 +1664,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3713865600136677352}
   m_HandleRect: {fileID: 3682059893864690261}
   m_Direction: 2
-  m_Value: 1.0000029
+  m_Value: 1.0000006
   m_Size: 0.7338044
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2070,7 +2071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371, y: 288.7294}
+  m_AnchoredPosition: {x: -371, y: 288.72998}
   m_SizeDelta: {x: 772, y: 786.94}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4470975902932595579

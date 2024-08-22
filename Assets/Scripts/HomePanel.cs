@@ -6,9 +6,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HomePanel : MonoBehaviour
+public class HomePanel : Panel
 {
-    [SerializeField] private GameObject PanelProfile;
     [SerializeField] private Image Avatar;
     [SerializeField] private TextMeshProUGUI NamePlayer;
     private AvatarInfors avatarInfors;
@@ -21,9 +20,10 @@ public class HomePanel : MonoBehaviour
         Instance = this;
     }
 
-    public void On()
+    public void OpenProfile()
     {
-        PanelProfile.SetActive(true);
+        //PanelManager.OpenPanel("name");
+        PanelManager.Instance.OpenPanel("ProfilePanel");
     }
 
     public void UpdateAvatar()
@@ -31,5 +31,14 @@ public class HomePanel : MonoBehaviour
         int idStart = PlayerPrefs.GetInt("AvatarId", 1);
         avatarInfors = Resources.Load<AvatarInfors>("Avatars/" + idStart);
         Avatar.sprite = avatarInfors.SpriteImage;
+    }
+    public override void Open()
+    {
+        base.Open();
+        //Animation, load data
+    }
+    public void OpenSetting()
+    {
+        PanelManager.Instance.OpenPanel("SettingPanel");
     }
 }

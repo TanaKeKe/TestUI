@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: 13
   m_EditorClassIdentifier: 
   spriteImage: {fileID: 21300000, guid: 972e9ff9bf342f043bb8b687405a3f5a, type: 3}
-  name: tan13
   id: 13

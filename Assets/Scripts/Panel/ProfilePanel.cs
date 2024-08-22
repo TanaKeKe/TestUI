@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ProfilePanel : MonoBehaviour
+public class ProfilePanel : Panel
 {
     #region SingleTon
     public static ProfilePanel Instance;
@@ -39,19 +39,14 @@ public class ProfilePanel : MonoBehaviour
 
     private void GenerateAvatar()
     {
-        for (int i = 0; i < 16; i++)
+        AvatarInfors[] avatarLists = Resources.LoadAll<AvatarInfors>("Avatars");
+        foreach(AvatarInfors avatar in avatarLists)
         {
             var obj = Instantiate(avatarPrefab, content);
-
-            AvatarInfors avatarInfors = Resources.Load<AvatarInfors>("Avatars/" + (i + 1));
-            obj.GetComponent<AvatarButton>().Init(avatarInfors);
+            obj.GetComponent<AvatarButton>().Init(avatar);
         }
     }
-
-    public void Close()
-    {
-        gameObject.SetActive(false);
-    }    
+  
     public void Save()
     {
         PlayerPrefs.SetInt("AvatarId", idSelecting);
